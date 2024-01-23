@@ -10,8 +10,7 @@ function calculateAndDisplay() {
         alert('Error: Please enter a valid number of people- only numbers')
         return
     }
-
-    // Recognize how much they want to tip
+    // Recognize how much user wants to tip
     let service = document.getElementById('serviceQuality').value
     if(service === 'Great') {
         tipPercent = 0.2
@@ -23,12 +22,9 @@ function calculateAndDisplay() {
         alert('Error: Please enter a valid service quality')
         return
     }
-
-    // Calculate how much they should tip
+    // Calculations for total bill, tips, and amount per person
     let tipTotal = tipPercent * bill
-    // Calculate total bill
     let totalBill = tipTotal + bill
-    // Calculate amount per person
     let amountPerPerson = totalBill / numOfPpl
     // Display these numbers
     document.getElementById('tipResult').innerText = 'Tip: $' + tipTotal.toFixed(2)
