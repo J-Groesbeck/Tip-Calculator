@@ -13,7 +13,6 @@ function calculateAndDisplay() {
 
     // Recognize how much they want to tip
     let service = document.getElementById('serviceQuality').value
-    let tipPercent = 0
     if(service === 'Great') {
         tipPercent = 0.2
     } else if(service === 'Good') {
